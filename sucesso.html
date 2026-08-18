@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Sucesso</title>
+    </head>
+    <body>
+        <h2>Formulário enviado com sucesso!</h2>  
+        <p>* <span id="nascimento"></span></p>
+        <p>* <span id="peso"></span></p>
+        <p>* <span id="sangue"></span></p>
+        <p>* <span id="rh"></span></p>
+        <p>* <span id="sexo"></span></p>
+        <p>* <span id="doc"></span></p>
+        <p>* <span id="atividadeFisica"></span></p>
+        <p>* <span id="medicacao"></span></p>
+        <p>* <span id="fuma"></span></p>
+    </body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+ 
+        const dataNascimento = params.get('dataNascimento');
+        document.getElementById('nascimento').textContent = dataNascimento;
+        
+        const peso = params.get('peso');
+        document.getElementById('peso').textContent = peso;
+
+        const tpsanguineo = params.get('tpsanguineo');
+        document.getElementById('sangue').textContent = tpsanguineo;
+
+        const rh = params.get('rh');
+        document.getElementById('rh').textContent = rh;
+
+        const sexo = params.get('sexo');
+        document.getElementById('sexo').textContent = sexo;
+
+        const doc = params.get('doc');
+        document.getElementById('doc').textContent = doc;
+
+        const atividadeFisica = params.get('atividadeFisica');
+        document.getElementById('atividadeFisica').textContent = atividadeFisica;
+
+        const medicacao = params.get('medicacao');
+        document.getElementById('medicacao').textContent = medicacao;
+        
+        const fumante = params.get('fumante');
+        document.getElementById('fuma').textContent = fumante;
+    </script>
+</html>
