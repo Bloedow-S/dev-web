@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Teste</title>
+    <style>
+        .field {
+            padding: 20px;
+        }
+
+        fieldset {
+            margin: 30px 50px 0px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="sucesso.html" target="_blank" method="GET">
+        <div class="field">
+            <label for="dataNascimento">Data de nascimento: </label>
+            <input type="date" id="dataNascimento" name="dataNascimento">
+            <output id="idade" name="idade"></output>
+        </div>
+        
+        <div class="field">
+            <label>Peso (kg):</label>
+            <input type="number" id="peso" name="peso">
+        </div>
+
+        <div class="field">
+            <label for="tpsanguineo">Tipo sanguíneo:</label>
+            <select id="tpsanguineo" name="tpsanguineo">
+                <option>Selecione...</option>
+                <option>O</option>
+                <option>A</option>
+                <option>B</option>
+                <option>AB</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="rh">Fator RH:</label>
+            <select id="rh" name="rh">
+                <option>Selecione...</option>
+                <option>+</option>
+                <option>-</option>
+            </select> 
+        </div>
+        
+        <div class="field">
+            <label for="doc">Número de documento:</label>
+            <input type="text" id="doc" name="doc">
+        </div>
+
+        <fieldset class="field">
+            <legend>Sexo:</legend>
+            <label> <!--mesmo name: define que os radios fazem parte do mesmo grupo e só um pode ser selecionado-->
+                <input type="radio" id="sexo" name="sexo" value="Masculino">
+                Masculino
+            </label>
+            
+            <label >
+                <input type="radio" id="sexo" name="sexo" value="Feminino">
+                Feminino
+            </label>
+
+            <label> <!--input dentro da label: elimina a necessidade de for + id-->
+                <input type="radio" id="sexo" name="sexo" value="Outro">
+                Outro
+            </label>
+        </fieldset>
+
+        <fieldset class="field">
+            <legend>Informações Adicionais</legend>
+            
+            <div>
+                <input type="checkbox" id="atividadeFisica" name="atividadeFisica" value="pratico atividade fisica">
+                <label for="atividadeFisica"> Pratico atividade física</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="medicacao" name="medicacao" value="uso medicacao">
+                <label for="medicacao">Uso medicação contínua</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="fumante" name="fumante" value="sou fumante">
+                <label for="fumante">Sou fumante</label>
+            </div>  <!--Poderia trocar div pela label, mas ela é inline enquanto a div ordena em bloco (um embaixo do outro)-->
+        </fieldset>
+        
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+
+</html>
