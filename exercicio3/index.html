@@ -3,28 +3,34 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Minha Página</title>
+    <title>Morse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="card_content">
-        <div class="card_img">
-            <img src="morse-img.jpeg" alt="Samuel Morse">
+    <div class="card">
+        <div class="card_content">
+            <div class="card_img">
+                <img src="images/morse-img.jpeg" alt="Samuel Morse">
+            </div>
+            <div class="card_text">
+                <div class= "text_intro">
+                    <h1 id="title">Samuel Morse</h1>
+                    <p id="question">"A eletricidade apenas fornece força ou ela também pode carregar informação?"</p>
+                </div>
+                <div class="card_description">
+                    <p>A eletricidade pode variar! Ficando mais forte, mais fraca, ligando, desligando e mudando de direção milhões de vezes por segundo. Para Samuel Morse isso era interessantíssimo, pois, controlando a passagem de eletricidade seria possível representar algo, como uma letra por exemplo!<p>
+                    <p>Imagine se a eletricidade ligada por pouco tempo simbolizasse um ponto '.' e por muito tempo simbolizasse um traço '-', em seguida poderíamos relacionar esse código gerado '.-' à letra 'A'. Logo, para representar 'A' seria necessário ligar a energia por pouco tempo -> desligar -> ligar a energia por muito tempo (alguns segundos a mais) -> e desligar definitivamente.</p>
+                    <p>Essa ideia foi o princípio do código Morse, criado por alguém que já estava cansado de mandar sinal de fumaça para poder se comunicar à distância!</p>
+                </div>
+
+            </div>
         </div>
-        <div class="card_text">
-            <h1 id="titulo">Samuel Morse</h1>
-            <div class="card_questions">
-                <p>"A eletricidade apenas fornece força?"</p>
-                <p>Ou ela também pode carregar informação?</p>
-                <p>Como?</p>
-            </div>
-            <div class="card_description">
-                <p>A eletricidade pode variar! Ficando mais forte, mais fraca, ligando, desligando e mudando de direção milhões de vezes por segundo. Para Samuel Morse isso era interessantíssimo, pois controlando a passagem de eletricidade poderia representar algo, como uma letra por exemplo!<p>
-                
-                <p>Imagine se a eletricidade ligada por pouco tempo simbolizasse um ponto '.' e por muito tempo simbolizasse um traço '-', em seguida poderíamos relacionar esse código gerado '.-' à letra 'A'. Logo, para representar 'A' seria necessário ligar a energia por pouco tempo -> desligar -> ligar a energia por muito tempo (alguns segundos a mais) -> e desligar definitivamente.</p>
-                
-                <p>Essa ideia foi o princípio do código Morse, criado por alguém que já estava cansado de mandar sinal de fumaça para poder se comunicar à distância!</p>
-            </div>
+        <div class="card_link">
+            <p id="seemore">Saiba mais: </p>
+            <a href="pageCodMorse.html">pageCodMorse.html</a>
         </div>
     </div>
 </body>
