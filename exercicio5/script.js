@@ -33,7 +33,7 @@ exibirItens(carrinho);
 
 function exibirItens(carrinho_p) {
     for (let item of carrinho_p) {
-        let subtotal = item.preco * item.quantidade; 
-        console.log(`${item.nome} | ${item.preco.toFixed(2)} | ${subtotal.toFixed(2)}`);
+        item.subtotal = item.preco * item.quantidade;
+        console.log(`${item.nome} | ${item.preco.toFixed(2)} | ${item.subtotal.toFixed(2)}`);
     }
 }
