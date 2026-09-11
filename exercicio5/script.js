@@ -10,8 +10,8 @@ Listagem de Itens com Loop (for...of ou métodos de array):
     Utilize um loop for...of para percorrer os produtos e exibir no console o nome do produto, a quantidade e o subtotal daquele item (preco * quantidade).
 Função com Arrow Function (Cálculo do Total):
     Crie uma arrow function chamada calcularTotal que receba o array carrinho como parâmetro, somando os subtotais de todos os itens e retornando o valor total bruto da compra.
-    Tomada de Decisão com switch (Aplicação de Cupom):
-Crie uma função chamada aplicarCupom que receba o valorTotal e uma string cupom.
+Tomada de Decisão com switch (Aplicação de Cupom):
+    Crie uma função chamada aplicarCupom que receba o valorTotal e uma string cupom.
     Use a estrutura switch para avaliar o cupom:
         "DESCONTO10": concede 10% de desconto.
         "MEGADESCONTO": concede 20% de desconto.
@@ -36,4 +36,11 @@ function exibirItens(carrinho_p) {
         item.subtotal = item.preco * item.quantidade;
         console.log(`${item.nome} | ${item.preco.toFixed(2)} | ${item.subtotal.toFixed(2)}`);
     }
+}
+
+/*Recebe total bruto = 0, e subtotal como entradas*/
+const calcularTotal = carrinho => carrinho.reduce((totalBruto, item) => totalBruto + item.subtotal, 0 );
+console.log(calcularTotal);
+let total = calcularTotal(carrinho);
+function aplicarCupom(vTotal, cupom) {
 }
