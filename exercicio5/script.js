@@ -14,7 +14,7 @@ Tomada de Decisão com switch (Aplicação de Cupom):
     Crie uma função chamada aplicarCupom que receba o valorTotal e uma string cupom.
     Use a estrutura switch para avaliar o cupom:
         "DESCONTO10": concede 10% de desconto.
-        "MEGADESCONTO": concede 20% de desconto.
+        "MEGADESCONTO": concede 20% de desconto. não aplica desconto (retorna o valor original) e exibe um aviso de cupom inválido se uma string for informada.
         default: não aplica desconto (retorna o valor original) e exibe um aviso de cupom inválido se uma string for informada.
 A função deve retornar o valor final atualizado.
 Execução e Teste: 
@@ -29,18 +29,29 @@ let carrinho = [
     {nome: 'monitor 24 polegadas', preco: 899.99, quantidade: 8}
 ];
 
-exibirItens(carrinho);
-
 function exibirItens(carrinho_p) {
     for (let item of carrinho_p) {
         item.subtotal = item.preco * item.quantidade;
         console.log(`${item.nome} | ${item.preco.toFixed(2)} | ${item.subtotal.toFixed(2)}`);
     }
 }
-
 /*Recebe total bruto = 0, e subtotal como entradas*/
 const calcularTotal = carrinho => carrinho.reduce((totalBruto, item) => totalBruto + item.subtotal, 0 );
-console.log(calcularTotal);
-let total = calcularTotal(carrinho);
+
 function aplicarCupom(vTotal, cupom) {
+    switch(cupom) {
+        case "DESCONTO10":
+            return vTotal = (vTotal - (vTotal * 0.1)).toFixed(2);
+        case "MEGADESCONTO":
+            return vTotal = (vTotal - (vTotal * 0.2)).toFixed(2);
+        default:
+            console.log(cupom + " [cupom inválido]");
+            return vTotal;
+    } 
 }
+
+exibirItens(carrinho);
+let total = calcularTotal(carrinho);
+console.log(`\nTotal bruto: ${total}`);
+let p = aplicarCupom(total, "MEGADESCONTO");
+console.log(`A pagar: ${p}`);
