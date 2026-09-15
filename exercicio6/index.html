@@ -17,22 +17,34 @@ e-commerce usando o Bootstrap:
     <body>
         <!--navbar: classe base; navbar-dark: muda a cor do texto/ícones pra um tom claro; bg-dark: cor escura de fundo -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><!--navbar-expand-lg: breakpoint a partir de 992px expande, abaixo disso vira menu hamburguer-->
-            <div class="conteiner">
+            <div class="container">
                 <a class="navbar-brand h1" href="#">Loja</a><!--navbar-brand: logo/nome: altera font-size, line-height, margin-right-->
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"> <!--navbar-toggler: estiliza o botão; data-bs-toggle="collapse": ativa uma ação no js de expandir ou encolher-->
+                    <span class="navbar-toggler-icon"></span><!--navbar-toggler-icon:estiliza o ícone-->
                 </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Carrinho
+                                <span>0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <!--Vai na main o conteúdo específico de cada página-->
         <main class="container my-4"><!-- m: margin; y: eixo y; 4 ~ 1.5rem/24px -->
             <div class="row">
-                <section class="col-md-8 bg-secondary">
-                    Produtos
+                <section class="col-md-8">
+                    <div class="row g-4" id="listaProdutos">
+                    </div>
                 </section>
+
                 <aside class="col-md-4 bg-info">
                     Carrinho
-                </aside>
+                </aside>         
             </div>
         </main>
 

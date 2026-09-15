@@ -55,3 +55,34 @@ let total = calcularTotal(carrinho);
 console.log(`\nTotal bruto: ${total}`);
 let p = aplicarCupom(total, "MEGADESCONTO");
 console.log(`A pagar: ${p}`);
+
+let produtos = [
+    {nome: 'smartphone', preco: 1299.90, quantidade: 2},
+    {nome: 'fone de ouvido', preco: 89.90, quantidade: 12},
+    {nome: 'teclado mecânico', preco: 249.99, quantidade: 15},
+    {nome: 'mouse sem fio', preco: 79.90, quantidade: 10},
+    {nome: 'monitor 24 polegadas', preco: 899.99, quantidade: 8}
+];
+
+function renderizarProdutos(lista) {
+    const container = document.getElementById('listaProdutos');
+    container.innerHTML = '';
+
+    for (const [index, produto] of lista.entries()) { /*entries(): método que faz retornar n só cada item mas a sua posição (índice) na lista*/
+        const coluna = document.createElement('div');
+        coluna.className = 'col-12 col-md-6 col-lg-4';
+
+        coluna.innerHTML = `
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">${produto.nome}</h5>
+                    <p class="card-text">${produto.preco.toFixed(2)}</p>
+                    <button class="btn btn-primary" data-index="${index}">Adicionar</button>
+                </div>
+            </div>
+        `;
+
+        container.appendChild(coluna);
+    }
+}
+renderizarProdutos(carrinho);
